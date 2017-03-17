@@ -3,7 +3,7 @@
 angular.module('view1', ['ngRoute', 'gamedataService'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/view1', {
+        $routeProvider.when('#/view1', {
             templateUrl: 'view1/view1.html',
             controller: 'View1Ctrl'
         });
