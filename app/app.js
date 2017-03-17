@@ -18,7 +18,7 @@ app.config( function ($routeProvider) {
 
 });
 
-app.controller('mainController', ['$scope', '$log', function($scope, $log) {
+app.controller('mainController', [function() {
     var self = this;
 
     self.name = 'Main';
