@@ -1,24 +1,26 @@
 /**
  * Created by mharrell on 3/17/17.
  */
-var myApp = angular.module('myApp', ['ngRoute',
+var app = angular.module('app', [   'ngRoute',
                                     'view1',
                                     'view2']);
 
-myApp.config(function ($routeProvider) {
+app.config( function ($routeProvider) {
 
     $routeProvider
 
-        .when('#', {
+        .when('#/', {
             templateUrl: 'index.html',
             controller: 'mainController'
-        })
+        });
+        // .otherwise({ redirectTo: '/'});
 
 
 });
 
-myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
+app.controller('mainController', ['$scope', '$log', function($scope, $log) {
+    var self = this;
 
-    $scope.name = 'Main';
+    self.name = 'Main';
 
 }]);
