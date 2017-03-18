@@ -15,10 +15,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     </head>
 
-    <body>
+    <body ng-controller="mainController as main">
 
         <header>
             <nav class="navbar navbar-default">
@@ -39,7 +39,7 @@
 
         <div class="container">
 
-            <p>{{name}}</p>
+            <p>{{main.name}}</p>
 
             <div ng-view></div>
 
@@ -49,7 +49,6 @@
 
         <!--footer-->
         <div>Angular seed app</div>
-
 
         <script src="app.js"></script>
         <script src="services/gamedataService.js"></script>
